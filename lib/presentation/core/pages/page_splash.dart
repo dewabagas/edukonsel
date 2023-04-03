@@ -19,7 +19,7 @@ class _PageSplashState extends State<PageSplash> {
   @override
   Widget build(BuildContext context) {
     log('splash screen');
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 1), () {
       AutoRouter.of(context).push(const RouteOnboarding());
     });
     return const SizedBox();
