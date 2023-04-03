@@ -65,7 +65,7 @@ class _PageOnboardingState extends State<PageOnboarding> {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 47.w),
+              padding: EdgeInsets.symmetric(vertical: 16.h, horizontal: 29.w),
               child: Column(
                 children: [
                   SizedBox(height: 24.h),
@@ -111,6 +111,7 @@ class _PageOnboardingState extends State<PageOnboarding> {
                       suffixIcon: SvgPicture.asset(AppIcons.icArrowRight),
                       title: '',
                       height: 50.h,
+                      margin: EdgeInsets.symmetric(horizontal: 18.w),
                       width: double.infinity,
                       onPressed: () {
                         log('message');

@@ -15,6 +15,7 @@ class ButtonGradient extends StatelessWidget {
   final Widget? prefixIcon;
   final Widget? suffixIcon;
   final EdgeInsets? padding;
+  final EdgeInsets? margin;
 
   const ButtonGradient(
       {Key? key,
@@ -27,6 +28,7 @@ class ButtonGradient extends StatelessWidget {
       this.isLoading = false,
       this.prefixIcon,
       this.padding,
+      this.margin,
       this.suffixIcon})
       : super(key: key);
 
@@ -49,6 +51,7 @@ class ButtonGradient extends StatelessWidget {
     Color textColor = enabled ? AppColors.white : AppColors.black;
     return Container(
       decoration: decoration,
+      margin: margin ?? EdgeInsets.zero,
       child: MaterialButton(
         padding:
             padding ?? EdgeInsets.symmetric(horizontal: 32.w, vertical: 4.h),
