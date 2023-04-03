@@ -1,14 +1,14 @@
 import 'dart:developer';
 
+import 'package:auto_route/auto_route.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:edukonsel/domain/onboarding/model/introduction.dart';
 import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
+import 'package:edukonsel/presentation/routes/router.gr.dart';
 import 'package:edukonsel/presentation/shared/widgets/buttons/button_gradient.dart';
 import 'package:edukonsel/presentation/shared/widgets/pages/page_arc_bottom.dart';
-import 'package:edukonsel/presentation/shared/widgets/shapes/curved_bottom_clipper.dart';
-import 'package:edukonsel/presentation/shared/widgets/shapes/half_circle_shape.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -115,6 +115,7 @@ class _PageOnboardingState extends State<PageOnboarding> {
                       width: double.infinity,
                       onPressed: () {
                         log('message');
+                        AutoRouter.of(context).push(const RouteLogin());
                       }),
                   SizedBox(height: 5.h),
                 ],

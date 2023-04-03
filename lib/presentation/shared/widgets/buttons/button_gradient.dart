@@ -69,7 +69,9 @@ class ButtonGradient extends StatelessWidget {
                 ),
               )
             : Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: prefixIcon == null && suffixIcon == null
+                    ? MainAxisAlignment.center
+                    : MainAxisAlignment.spaceBetween,
                 children: [
                   if (prefixIcon != null) prefixIcon!,
                   Padding(

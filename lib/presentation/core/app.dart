@@ -6,10 +6,15 @@ import 'package:edukonsel/presentation/core/styles/app_theme.dart';
 import 'package:edukonsel/presentation/core/utils/lifecycle_container.dart';
 import 'package:edukonsel/presentation/routes/router.gr.dart';
 
-class App extends StatelessWidget {
-  App({super.key});
-  final _appRouter = AppRouter();
+class App extends StatefulWidget {
+  const App({super.key});
 
+  @override
+  State<App> createState() => _AppState();
+}
+
+class _AppState extends State<App> {
+  final _appRouter = AppRouter();
   @override
   Widget build(BuildContext context) {
     return LifecycleContainer(

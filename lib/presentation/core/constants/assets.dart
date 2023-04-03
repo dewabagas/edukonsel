@@ -26,6 +26,7 @@ class AppIcons {
   static const String icSetting = 'assets/icons/ic_setting.svg';
   static const String icStar = 'assets/icons/ic_star.svg';
   static const String icTipsGrey = 'assets/icons/ic_tips_grey.svg';
+  static const String icCrossRed = 'assets/icons/ic_tips_grey.svg';
 
 }
 
