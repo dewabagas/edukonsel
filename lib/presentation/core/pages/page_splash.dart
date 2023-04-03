@@ -12,7 +12,6 @@ class PageSplash extends StatefulWidget {
 }
 
 class _PageSplashState extends State<PageSplash> {
-
   @override
   void initState() {
     Future.delayed(const Duration(seconds: 1), () {
@@ -20,6 +19,7 @@ class _PageSplashState extends State<PageSplash> {
     });
     super.initState();
   }
+
   @override
   Widget build(BuildContext context) {
     return const SizedBox();

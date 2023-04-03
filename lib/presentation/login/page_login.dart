@@ -21,97 +21,99 @@ class _PageLoginState extends State<PageLogin> {
   @override
   Widget build(BuildContext context) {
     return PageArcTop(
-      resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomInset: false,
         child: Container(
-      padding: EdgeInsets.symmetric(horizontal: 20.w),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+          padding: EdgeInsets.symmetric(horizontal: 20.w),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              SizedBox(height: 114.h),
-              Text('Halo',
-                  style: TextStyles.headlineLarge
-                      .copyWith(color: AppColors.brokenWhite)),
-              Text(
-                'Login dulu yuk, untuk mencari ketenangan~',
-                style: TextStyles.titleMedium
-                    .copyWith(color: AppColors.brokenWhite),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 114.h),
+                  Text('Halo',
+                      style: TextStyles.headlineLarge
+                          .copyWith(color: AppColors.brokenWhite)),
+                  Text(
+                    'Login dulu yuk, untuk mencari ketenangan~',
+                    style: TextStyles.titleMedium
+                        .copyWith(color: AppColors.brokenWhite),
+                  ),
+                ],
               ),
-            ],
-          ),
-          Form(
-            child: Column(
-              children: [
-                InputPrimary(label: 'Email'),
-                SizedBox(height: 10.h),
-                InputPrimary(
-                    label: 'Password',
-                    obscureText: obscureText,
-                    suffixIcon: IconButton(
-                      icon: Icon(
-                        obscureText
-                            ? Icons.visibility_off_outlined
-                            : Icons.visibility_outlined,
-                        color: AppColors.darkGrey,
-                      ),
-                      onPressed: () {
-                        setState(() {
-                          obscureText = !obscureText;
-                        });
-                      },
-                    )),
-                SizedBox(height: 26.h),
-                InkWell(
-                  child: Align(
-                      alignment: Alignment.centerRight,
-                      child: Text(
-                        'Lupa Password?',
-                        style: TextStyles.headlineSmall.copyWith(
-                            fontSize: 14.sp,
-                            decoration: TextDecoration.underline),
-                      )),
-                ),
-                SizedBox(height: 32.h),
-                ButtonGradient(
-                    title: 'Login', height: 50.h, onPressed: () {}),
-                SizedBox(height: 57.h),
-                Text('atau login dengan',
-                    style: TextStyles.labelLarge
-                        .copyWith(color: AppColors.darkGrey)),
-                SizedBox(height: 21.h),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
+              Form(
+                child: Column(
                   children: [
+                    InputPrimary(label: 'Email'),
+                    SizedBox(height: 10.h),
+                    InputPrimary(
+                        label: 'Password',
+                        obscureText: obscureText,
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            obscureText
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: AppColors.darkGrey,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              obscureText = !obscureText;
+                            });
+                          },
+                        )),
+                    SizedBox(height: 26.h),
                     InkWell(
-                      child: SvgPicture.asset(AppIcons.icGoogleRound),
+                      child: Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'Lupa Password?',
+                            style: TextStyles.headlineSmall.copyWith(
+                                fontSize: 14.sp,
+                                decoration: TextDecoration.underline),
+                          )),
                     ),
-                    SizedBox(width: 30.64.w),
-                    InkWell(
-                      child: SvgPicture.asset(AppIcons.icFacebookRound),
+                    SizedBox(height: 32.h),
+                    ButtonGradient(
+                        title: 'Login', height: 50.h, onPressed: () {}),
+                    SizedBox(height: 57.h),
+                    Text('atau login dengan',
+                        style: TextStyles.labelLarge
+                            .copyWith(color: AppColors.darkGrey)),
+                    SizedBox(height: 21.h),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        InkWell(
+                          child: SvgPicture.asset(AppIcons.icGoogleRound),
+                        ),
+                        SizedBox(width: 30.64.w),
+                        InkWell(
+                          child: SvgPicture.asset(AppIcons.icFacebookRound),
+                        )
+                      ],
                     )
                   ],
-                )
-              ],
-            ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.only(
+                  bottom: 47.h,
+                ),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text('Belum punya akun? ',
+                        style: TextStyles.labelLarge
+                            .copyWith(color: AppColors.darkGrey)),
+                    Text('Daftar',
+                        style: TextStyles.labelLarge
+                            .copyWith(decoration: TextDecoration.underline)),
+                  ],
+                ),
+              )
+            ],
           ),
-          Padding(
-            padding: EdgeInsets.only(bottom: 47.h,),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text('Belum punya akun? ',
-                    style: TextStyles.labelLarge
-                        .copyWith(color: AppColors.darkGrey)),
-                Text('Daftar',
-                    style: TextStyles.labelLarge
-                        .copyWith(decoration: TextDecoration.underline)),
-              ],
-            ),
-          )
-        ],
-      ),
-    ));
+        ));
   }
 }

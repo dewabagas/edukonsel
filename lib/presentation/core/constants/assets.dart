@@ -6,8 +6,10 @@ class AppIcons {
   static const String icChevronLeft = 'assets/icons/ic_chevron_left.svg';
   static const String icChevronRight = 'assets/icons/ic_chevron_right.svg';
   static const String icClock = 'assets/icons/ic_clock.svg';
-  static const String icConsultationBlue = 'assets/icons/ic_consultation_blue.svg';
-  static const String icConsultationGrey = 'assets/icons/ic_consultation_grey.svg';
+  static const String icConsultationBlue =
+      'assets/icons/ic_consultation_blue.svg';
+  static const String icConsultationGrey =
+      'assets/icons/ic_consultation_grey.svg';
   static const String icEyeOffBlue = 'assets/icons/ic_eye_off_blue.svg';
   static const String icEyeOffRed = 'assets/icons/ic_eye_off_red.svg';
   static const String icEyeOnBlue = 'assets/icons/ic_eye_on_blue.svg';
@@ -27,13 +29,12 @@ class AppIcons {
   static const String icStar = 'assets/icons/ic_star.svg';
   static const String icTipsGrey = 'assets/icons/ic_tips_grey.svg';
   static const String icCrossRed = 'assets/icons/ic_tips_grey.svg';
-
 }
 
 class AppIllustrations {
-  static const String illConsultation = 'assets/illustrations/ill_consultation.svg';
+  static const String illConsultation =
+      'assets/illustrations/ill_consultation.svg';
   static const String illTexting = 'assets/illustrations/ill_texting.svg';
-
 }
 
 class AppImages {
@@ -41,5 +42,6 @@ class AppImages {
 }
 
 class AppBanners {
-  static const String bnrFreeConsultation = 'assets/images/bnr_free_consultation.png';
+  static const String bnrFreeConsultation =
+      'assets/images/bnr_free_consultation.png';
 }

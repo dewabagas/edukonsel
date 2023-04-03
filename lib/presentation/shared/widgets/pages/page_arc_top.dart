@@ -9,7 +9,10 @@ class PageArcTop extends StatelessWidget {
   final bool? resizeToAvoidBottomInset;
   final List<Widget>? persistentFooterButtons;
   PageArcTop(
-      {super.key, required this.child, this.resizeToAvoidBottomInset, this.persistentFooterButtons});
+      {super.key,
+      required this.child,
+      this.resizeToAvoidBottomInset,
+      this.persistentFooterButtons});
 
   @override
   Widget build(BuildContext context) {

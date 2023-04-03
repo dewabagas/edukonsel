@@ -8,13 +8,13 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 void main() async {
-      // WidgetsFlutterBinding.ensureInitialized();
-      WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-      FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-      SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-      await Firebase.initializeApp();
-      await _initializeCrashlytics();
-      runApp(App());
+  // WidgetsFlutterBinding.ensureInitialized();
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+  await Firebase.initializeApp();
+  await _initializeCrashlytics();
+  runApp(App());
 }
 
 Future<void> _initializeCrashlytics() async {

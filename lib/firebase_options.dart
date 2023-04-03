@@ -67,7 +67,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1024826384819',
     projectId: 'edukonsel',
     storageBucket: 'edukonsel.appspot.com',
-    iosClientId: '1024826384819-uaq0abf886550m57g9n55sj6bhovslsi.apps.googleusercontent.com',
+    iosClientId:
+        '1024826384819-uaq0abf886550m57g9n55sj6bhovslsi.apps.googleusercontent.com',
     iosBundleId: 'com.example.edukonsel',
   );
 
@@ -77,7 +78,8 @@ class DefaultFirebaseOptions {
     messagingSenderId: '1024826384819',
     projectId: 'edukonsel',
     storageBucket: 'edukonsel.appspot.com',
-    iosClientId: '1024826384819-uaq0abf886550m57g9n55sj6bhovslsi.apps.googleusercontent.com',
+    iosClientId:
+        '1024826384819-uaq0abf886550m57g9n55sj6bhovslsi.apps.googleusercontent.com',
     iosBundleId: 'com.example.edukonsel',
   );
 }
