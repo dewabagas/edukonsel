@@ -1,4 +1,3 @@
-import 'package:auto_route/annotations.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
@@ -12,14 +11,14 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class PageLogin extends StatefulWidget {
-  const PageLogin({super.key});
+class PageRegister extends StatefulWidget {
+  const PageRegister({super.key});
 
   @override
-  State<PageLogin> createState() => _PageLoginState();
+  State<PageRegister> createState() => _PageRegisterState();
 }
 
-class _PageLoginState extends State<PageLogin> {
+class _PageRegisterState extends State<PageRegister> {
   bool obscureText = true;
   @override
   Widget build(BuildContext context) {
@@ -34,11 +33,11 @@ class _PageLoginState extends State<PageLogin> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(height: 114.h),
-                  Text('Halo',
+                  Text('Selamat Datang!',
                       style: TextStyles.headlineLarge
                           .copyWith(color: AppColors.brokenWhite)),
                   Text(
-                    'Login dulu yuk, untuk mencari ketenangan~',
+                    'Yuk bergabung bersama EduKonsel~',
                     style: TextStyles.titleMedium
                         .copyWith(color: AppColors.brokenWhite),
                   ),
@@ -65,20 +64,25 @@ class _PageLoginState extends State<PageLogin> {
                             });
                           },
                         )),
-                    SizedBox(height: 26.h),
-                    InkWell(
-                      child: Align(
-                          alignment: Alignment.centerRight,
-                          child: Text(
-                            'Lupa Password?',
-                            style: TextStyles.headlineSmall.copyWith(
-                                fontSize: 14.sp,
-                                decoration: TextDecoration.underline),
-                          )),
-                    ),
-                    SizedBox(height: 32.h),
+                    InputPrimary(
+                        label: 'Confirm Password',
+                        obscureText: obscureText,
+                        suffixIcon: IconButton(
+                          icon: Icon(
+                            obscureText
+                                ? Icons.visibility_off_outlined
+                                : Icons.visibility_outlined,
+                            color: AppColors.darkGrey,
+                          ),
+                          onPressed: () {
+                            setState(() {
+                              obscureText = !obscureText;
+                            });
+                          },
+                        )),
+                    SizedBox(height: 54.h),
                     ButtonGradient(
-                        title: 'Login', height: 50.h, onPressed: () {}),
+                        title: 'Daftar', height: 50.h, onPressed: () {}),
                     SizedBox(height: 57.h),
                     Text('atau login dengan',
                         style: TextStyles.labelLarge
@@ -106,14 +110,14 @@ class _PageLoginState extends State<PageLogin> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text('Belum punya akun? ',
+                    Text('Sudah punya akun? ',
                         style: TextStyles.labelLarge
                             .copyWith(color: AppColors.darkGrey)),
                     InkWell(
                       onTap: () {
-                        AutoRouter.of(context).push(const RouteRegister());
+                        AutoRouter.of(context).push(const RouteLogin());
                       },
-                      child: Text('Daftar',
+                      child: Text('Login',
                           style: TextStyles.labelLarge
                               .copyWith(decoration: TextDecoration.underline)),
                     ),

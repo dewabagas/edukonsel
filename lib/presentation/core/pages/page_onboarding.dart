@@ -115,7 +115,7 @@ class _PageOnboardingState extends State<PageOnboarding> {
                       width: double.infinity,
                       onPressed: () {
                         log('message');
-                        AutoRouter.of(context).push(const RouteLogin());
+                        AutoRouter.of(context).push(const RouteDashboard());
                       }),
                   SizedBox(height: 5.h),
                 ],

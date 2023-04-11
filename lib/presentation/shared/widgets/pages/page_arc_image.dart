@@ -6,15 +6,18 @@ import 'package:edukonsel/presentation/shared/widgets/shapes/curved_top_clipper.
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PageArcTop extends StatelessWidget {
+class PageArcImage extends StatelessWidget {
   final Widget child;
   final bool? resizeToAvoidBottomInset;
   final List<Widget>? persistentFooterButtons;
-  PageArcTop(
+  final Widget? bottomNavigationBar;
+  PageArcImage(
       {super.key,
       required this.child,
       this.resizeToAvoidBottomInset,
-      this.persistentFooterButtons});
+      this.persistentFooterButtons,
+      this.bottomNavigationBar
+      });
 
   @override
   Widget build(BuildContext context) {
@@ -23,16 +26,18 @@ class PageArcTop extends StatelessWidget {
       body: Stack(
         children: [
           ClipPath(
-            clipper: CurvedTopClipper(),
-            child: Container(
-              height: screenHeight / 2.8,
-              color: AppColors.primary,
-            ),
-          ),
+              clipper: CurvedTopClipper(),
+              child: Image.asset(
+                AppImages.bgNight,
+                fit: BoxFit.cover,
+                // height: screenHeight / 2.3,
+                height: 235.h,
+              )),
           child
         ],
       ),
-      persistentFooterButtons: this.persistentFooterButtons,
+      persistentFooterButtons: persistentFooterButtons,
+      bottomNavigationBar: bottomNavigationBar,
     );
   }
 }

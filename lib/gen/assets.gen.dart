@@ -39,6 +39,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_consultation_grey.svg
   String get icConsultationGrey => 'assets/icons/ic_consultation_grey.svg';
 
+  /// File path: assets/icons/ic_cross_red.svg
+  String get icCrossRed => 'assets/icons/ic_cross_red.svg';
+
   /// File path: assets/icons/ic_eye_off_blue.svg
   String get icEyeOffBlue => 'assets/icons/ic_eye_off_blue.svg';
 
@@ -104,6 +107,7 @@ class $AssetsIconsGen {
         icClock,
         icConsultationBlue,
         icConsultationGrey,
+        icCrossRed,
         icEyeOffBlue,
         icEyeOffRed,
         icEyeOn,

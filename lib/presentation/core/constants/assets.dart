@@ -38,10 +38,22 @@ class AppIllustrations {
 }
 
 class AppImages {
+  static const String bgNight = 'assets/images/bg_night.png';
   static const String imgSuccess = 'assets/images/img_success.png';
 }
 
 class AppBanners {
   static const String bnrFreeConsultation =
       'assets/images/bnr_free_consultation.png';
+}
+
+class BottomNavBar {
+  static const String icHomeGrey = 'assets/icons/ic_home_grey.svg';
+  static const String icHome = 'assets/icons/ic_home_blue.svg';
+  static const String icTipsGrey = 'assets/icons/ic_tips_grey.svg';
+  static const String icTips = 'assets/icons/ic_tips_blue.svg';
+  static const String icConsultationGrey = 'assets/icons/ic_consultation_grey.svg';
+  static const String icConsultation = 'assets/icons/ic_consultation_blue.svg';
+  static const String icProfileGrey = 'assets/icons/ic_profile_grey.svg';
+  static const String icProfile = 'assets/icons/ic_profile_blue.svg';
 }
