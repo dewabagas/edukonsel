@@ -16,8 +16,7 @@ class PageArcImage extends StatelessWidget {
       required this.child,
       this.resizeToAvoidBottomInset,
       this.persistentFooterButtons,
-      this.bottomNavigationBar
-      });
+      this.bottomNavigationBar});
 
   @override
   Widget build(BuildContext context) {

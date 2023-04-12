@@ -50,7 +50,7 @@ class TextStyles {
       );
   static TextStyle get labelSmall => quicksand.copyWith(
         color: AppColors.primary,
-        fontSize: 11.sp,
+        fontSize: 10.sp,
         fontWeight: FontWeight.w600,
       );
 

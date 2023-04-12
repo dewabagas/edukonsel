@@ -1,9 +1,10 @@
+import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
-class ButtonGradient extends StatelessWidget {
+class ButtonPrimary extends StatelessWidget {
   final String? title;
   final Function? onPressed;
   final bool enabled;
@@ -15,8 +16,9 @@ class ButtonGradient extends StatelessWidget {
   final Widget? suffixIcon;
   final EdgeInsets? padding;
   final EdgeInsets? margin;
+  final Color? color;
 
-  const ButtonGradient(
+  const ButtonPrimary(
       {Key? key,
       required this.title,
       required this.onPressed,
@@ -28,23 +30,20 @@ class ButtonGradient extends StatelessWidget {
       this.prefixIcon,
       this.padding,
       this.margin,
+      this.color,
       this.suffixIcon})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     BoxDecoration decoration = BoxDecoration(
-      borderRadius: BorderRadius.all(Radius.circular(30.r)),
-      gradient: const LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.topRight,
-          tileMode: TileMode.clamp,
-          colors: [AppColors.primary, Color(0xFFFAFAFA)]),
+      color: color ?? AppColors.primary,
+      borderRadius: BorderRadius.all(Radius.circular(5.r)),
     );
     if (!enabled) {
       decoration = BoxDecoration(
         color: AppColors.grey,
-        borderRadius: BorderRadius.circular(10.r),
+        borderRadius: BorderRadius.circular(5.r),
       );
     }
     Color textColor = enabled ? AppColors.white : AppColors.black;
@@ -77,10 +76,8 @@ class ButtonGradient extends StatelessWidget {
                     padding: const EdgeInsets.symmetric(vertical: 6.0),
                     child: Text(
                       title!,
-                      style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 14,
-                          color: textColor),
+                      style: TextStyles.labelSmall
+                          .copyWith(color: AppColors.white),
                     ),
                   ),
                   if (suffixIcon != null) suffixIcon!,

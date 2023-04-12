@@ -38,8 +38,10 @@ class CurvedBottomNavigationBar extends StatelessWidget {
           onTap: onTabSelected,
           items: items,
           type: BottomNavigationBarType.fixed,
-          selectedLabelStyle: TextStyles.headlineSmall.copyWith(fontSize: 10.sp),
-          unselectedLabelStyle: TextStyles.headlineSmall.copyWith(fontSize: 10.sp),
+          selectedLabelStyle:
+              TextStyles.headlineSmall.copyWith(fontSize: 10.sp),
+          unselectedLabelStyle:
+              TextStyles.headlineSmall.copyWith(fontSize: 10.sp),
         ),
       ),
     );

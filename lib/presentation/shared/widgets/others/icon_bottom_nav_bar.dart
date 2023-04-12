@@ -122,18 +122,20 @@ class _IconBottomAppNavBarState extends State<IconBottomAppNavBar> {
                       color: colorText,
                       fontWeight: fontWeight),
                 ),
-                  Container(
-                    width: double.infinity,
-                    height: 13.01.h,
-                    margin: EdgeInsets.only(top: 2.h),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(100.r),
-                        topRight: Radius.circular(100.r),
-                      ),
-                      color: _selectedIndex == index ? AppColors.primary : Colors.transparent,
+                Container(
+                  width: double.infinity,
+                  height: 13.01.h,
+                  margin: EdgeInsets.only(top: 2.h),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(100.r),
+                      topRight: Radius.circular(100.r),
                     ),
+                    color: _selectedIndex == index
+                        ? AppColors.primary
+                        : Colors.transparent,
                   ),
+                ),
               ],
             ),
           ),
