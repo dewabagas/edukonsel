@@ -72,6 +72,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_home_blue.svg
   String get icHomeBlue => 'assets/icons/ic_home_blue.svg';
 
+  /// File path: assets/icons/ic_home_grey.svg
+  String get icHomeGrey => 'assets/icons/ic_home_grey.svg';
+
   /// File path: assets/icons/ic_logout.svg
   String get icLogout => 'assets/icons/ic_logout.svg';
 
@@ -92,6 +95,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_star.svg
   String get icStar => 'assets/icons/ic_star.svg';
+
+  /// File path: assets/icons/ic_tips_blue.svg
+  String get icTipsBlue => 'assets/icons/ic_tips_blue.svg';
 
   /// File path: assets/icons/ic_tips_grey.svg
   String get icTipsGrey => 'assets/icons/ic_tips_grey.svg';
@@ -118,6 +124,7 @@ class $AssetsIconsGen {
         icGopay,
         icHistory,
         icHomeBlue,
+        icHomeGrey,
         icLogout,
         icMapMarker,
         icMyAccount,
@@ -125,6 +132,7 @@ class $AssetsIconsGen {
         icProfileGrey,
         icSetting,
         icStar,
+        icTipsBlue,
         icTipsGrey
       ];
 }
@@ -145,6 +153,10 @@ class $AssetsIllustrationsGen {
 class $AssetsImagesGen {
   const $AssetsImagesGen();
 
+  /// File path: assets/images/bg_night.png
+  AssetGenImage get bgNight =>
+      const AssetGenImage('assets/images/bg_night.png');
+
   /// File path: assets/images/bnr_free_consultation.png
   AssetGenImage get bnrFreeConsultation =>
       const AssetGenImage('assets/images/bnr_free_consultation.png');
@@ -161,7 +173,7 @@ class $AssetsImagesGen {
 
   /// List of all assets
   List<dynamic> get values =>
-      [bnrFreeConsultation, imgSplashPng, imgSplashSvg, imgSuccess];
+      [bgNight, bnrFreeConsultation, imgSplashPng, imgSplashSvg, imgSuccess];
 }
 
 class Assets {

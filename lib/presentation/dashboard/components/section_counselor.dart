@@ -1,5 +1,7 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
+import 'package:edukonsel/presentation/routes/router.gr.dart';
 import 'package:edukonsel/presentation/shared/widgets/cards/card_counselor.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -36,6 +38,9 @@ class _SectionCounselorState extends State<SectionCounselor> {
                 style: TextStyles.headlineSmall
                     .copyWith(fontSize: 18.sp, color: AppColors.primary)),
             InkWell(
+              onTap: () {
+                AutoRouter.of(context).push(const RouteConsultationList());
+              },
               child: Text(
                 'Lihat Semua >>',
                 style: TextStyles.headlineSmall

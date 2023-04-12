@@ -14,6 +14,8 @@ class _CardSearchState extends State<CardSearch> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: double.infinity,
+      height: 50.h,
       decoration: BoxDecoration(
         color: AppColors.white,
         borderRadius: BorderRadius.circular(100.r),

@@ -2,6 +2,7 @@ import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
 import 'package:edukonsel/presentation/dashboard/components/card_search.dart';
+import 'package:edukonsel/presentation/shared/widgets/cards/card_tips.dart';
 import 'package:edukonsel/presentation/shared/widgets/images/card_photo.dart';
 import 'package:edukonsel/presentation/shared/widgets/pages/page_decoration_top.dart';
 import 'package:flutter/material.dart';
@@ -46,65 +47,12 @@ class _TabTipsState extends State<TabTips> {
                   shrinkWrap: true,
                   itemCount: images.length,
                   itemBuilder: (BuildContext context, int index) {
-                    return Container(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 7.w, vertical: 5.h),
-                      margin: EdgeInsets.only(bottom: 15.h),
-                      decoration: BoxDecoration(
-                        color: AppColors.white,
-                        borderRadius: BorderRadius.circular(10.r),
-                        boxShadow: [
-                          BoxShadow(
-                            color: AppColors.darkGrey.withOpacity(0.25),
-                            spreadRadius: 0,
-                            blurRadius: 10,
-                            offset: const Offset(0, 0),
-                          ),
-                        ],
-                      ),
-                      child: Row(
-                        children: [
-                          CardPhoto(
-                            photoUrl: images[index],
-                            imageWidth: 93.w,
-                            imageHeight: 93.w,
-                          ),
-                          SizedBox(width: 15.w),
-                          SizedBox(
-                            width: 240.w,
-                            child: Column(
-                              children: [
-                                Text(
-                                    'Tips Memilih Program Studi yang Sesuai dengan Minat dan Bakat',
-                                    style: TextStyles.headlineSmall.copyWith(
-                                        color: AppColors.darkGrey2,
-                                        fontSize: 18.sp)),
-                                SizedBox(height: 10.w),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Row(
-                                      children: [
-                                        Icon(
-                                          Icons.favorite,
-                                          size: 11.w,
-                                          color: AppColors.red2,
-                                        ),
-                                        SizedBox(width: 5.81.w),
-                                        Text('145 Likes',
-                                            style: TextStyles.bodyVerySmall)
-                                      ],
-                                    ),
-                                    Text('2 hours ago',
-                                        style: TextStyles.bodyVerySmall)
-                                  ],
-                                )
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
+                    return CardTips(
+                      imageUrl: images[index],
+                      title:
+                          'Tips Memilih Program Studi yang Sesuai dengan Minat dan Bakat',
+                      likeCount: 145,
+                      timeDesc: '2 hours ago',
                     );
                   })
             ],

@@ -71,7 +71,11 @@ class _CardCounselorState extends State<CardCounselor> {
             children: [
               Row(
                 children: [
-                  SvgPicture.asset(AppIcons.icCase),
+                  SvgPicture.asset(
+                    AppIcons.icCase,
+                    height: 7.h,
+                    width: 7.h,
+                  ),
                   SizedBox(width: 3.w),
                   Text('${widget.experience}',
                       textAlign: TextAlign.center,
@@ -82,7 +86,11 @@ class _CardCounselorState extends State<CardCounselor> {
               SizedBox(width: 6.w),
               Row(
                 children: [
-                  SvgPicture.asset(AppIcons.icStar),
+                  SvgPicture.asset(
+                    AppIcons.icStar,
+                    height: 10.h,
+                    width: 10.w,
+                  ),
                   SizedBox(width: 3.w),
                   Text('${widget.rating}',
                       textAlign: TextAlign.center,
