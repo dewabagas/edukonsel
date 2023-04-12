@@ -1,6 +1,7 @@
 import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
 import 'package:edukonsel/presentation/dashboard/tabs/tab_home_patient.dart';
+import 'package:edukonsel/presentation/dashboard/tabs/tab_tips.dart';
 import 'package:edukonsel/presentation/shared/widgets/others/icon_bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -35,7 +36,7 @@ class _PageDashboardState extends State<PageDashboard> {
 
   static final List widgetOptions = [
     const TabHomePatient(),
-    const TabHomePatient(),
+    const TabTips(),
     const TabHomePatient(),
     const TabHomePatient(),
   ];
