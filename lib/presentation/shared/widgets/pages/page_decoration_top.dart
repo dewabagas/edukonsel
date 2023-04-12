@@ -45,8 +45,8 @@ class PageDecorationTop extends StatelessWidget {
                 decoration: BoxDecoration(
                     color: backgroundColor ?? AppColors.white,
                     borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(40.r),
-                      topRight: Radius.circular(40.r),
+                      topLeft: Radius.circular(30.r),
+                      topRight: Radius.circular(30.r),
                     )),
               ),
               child

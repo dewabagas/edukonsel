@@ -29,6 +29,9 @@ class AppIcons {
   static const String icStar = 'assets/icons/ic_star.svg';
   static const String icTipsGrey = 'assets/icons/ic_tips_grey.svg';
   static const String icCrossRed = 'assets/icons/ic_tips_grey.svg';
+  static const String icCrossGrey = 'assets/icons/ic_cross_grey.svg';
+  static const String icChecklist = 'assets/icons/ic_checklist.svg';
+  static const String icIndonesia = 'assets/icons/ic_indonesia.svg';
 }
 
 class AppIllustrations {

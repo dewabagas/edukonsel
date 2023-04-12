@@ -6,7 +6,10 @@ import 'package:edukonsel/presentation/core/pages/page_splash.dart';
 import 'package:edukonsel/presentation/counselor_detail.dart/page_counselor_detail.dart';
 import 'package:edukonsel/presentation/dashboard/page_dashboard.dart';
 import 'package:edukonsel/presentation/login/page_login.dart';
+import 'package:edukonsel/presentation/my_account/page_my_account.dart';
+import 'package:edukonsel/presentation/profile_setting/page_profile_setting.dart';
 import 'package:edukonsel/presentation/register/page_register.dart';
+import 'package:edukonsel/presentation/transaction_history/page_transaction_history.dart';
 
 @MaterialAutoRouter(replaceInRouteName: "Page,Route", routes: <AutoRoute>[
   // CORE
@@ -22,5 +25,10 @@ import 'package:edukonsel/presentation/register/page_register.dart';
   AutoRoute(page: PageConsultationList),
   AutoRoute(page: PageConsultationReservation),
   AutoRoute(page: PageCounselorDetail),
+
+  // PROFILE
+  AutoRoute(page: PageMyAccount),
+  AutoRoute(page: PageTransactionHistory),
+  AutoRoute(page: PageProfileSetting),
 ])
 class $AppRouter {}

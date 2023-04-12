@@ -39,36 +39,36 @@ class TextStyles {
       );
 
   static TextStyle get labelLarge => quicksand.copyWith(
-        color: AppColors.primary,
+        color: AppColors.charcoal,
         fontSize: 14.sp,
         fontWeight: FontWeight.w600,
       );
   static TextStyle get labelMedium => quicksand.copyWith(
-        color: AppColors.primary,
+        color: AppColors.charcoal,
         fontSize: 12.sp,
         fontWeight: FontWeight.w600,
       );
   static TextStyle get labelSmall => quicksand.copyWith(
-        color: AppColors.primary,
+        color: AppColors.charcoal,
         fontSize: 10.sp,
         fontWeight: FontWeight.w600,
       );
 
   static TextStyle get bodyLarge => quicksand.copyWith(
-        color: AppColors.grey,
+        color: AppColors.charcoal,
         fontSize: 16.sp,
       );
   static TextStyle get bodyMedium => quicksand.copyWith(
-        color: AppColors.grey,
+        color: AppColors.charcoal,
         fontSize: 14.sp,
       );
   static TextStyle get bodySmall => quicksand.copyWith(
-        color: AppColors.grey,
+        color: AppColors.charcoal,
         fontSize: 12.sp,
       );
 
   static TextStyle get bodyVerySmall => quicksand.copyWith(
-        color: AppColors.grey,
+        color: AppColors.charcoal,
         fontSize: 10.sp,
       );
 }

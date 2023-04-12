@@ -1,7 +1,9 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
 import 'package:edukonsel/presentation/dashboard/components/card_profile_item.dart';
+import 'package:edukonsel/presentation/routes/router.gr.dart';
 import 'package:edukonsel/presentation/shared/widgets/images/image_circle.dart';
 import 'package:edukonsel/presentation/shared/widgets/pages/draggable_page.dart';
 import 'package:flutter/material.dart';
@@ -74,19 +76,25 @@ class _TabProfileState extends State<TabProfile> {
             label: 'Akunku',
             hasDivider: true,
             icon: AppIcons.icMyAccount,
-            onTap: () {},
+            onTap: () {
+              AutoRouter.of(context).push(const RouteMyAccount());
+            },
           ),
           CardProfileItem(
             label: 'Riwayat Transaksi',
             hasDivider: true,
             icon: AppIcons.icHistory,
-            onTap: () {},
+            onTap: () {
+              AutoRouter.of(context).push(const RouteTransactionHistory());
+            },
           ),
           CardProfileItem(
             label: 'Pengaturan',
             hasDivider: true,
             icon: AppIcons.icSetting,
-            onTap: () {},
+            onTap: () {
+              AutoRouter.of(context).push(const RouteProfileSetting());
+            },
           ),
           CardProfileItem(
             label: 'Logout',

@@ -35,11 +35,11 @@ class ButtonGradient extends StatelessWidget {
   Widget build(BuildContext context) {
     BoxDecoration decoration = BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(30.r)),
-      gradient: const LinearGradient(
+      gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.topRight,
           tileMode: TileMode.clamp,
-          colors: [AppColors.primary, Color(0xFFFAFAFA)]),
+          colors: [AppColors.primary, AppColors.primary.withOpacity(0.49)]),
     );
     if (!enabled) {
       decoration = BoxDecoration(
