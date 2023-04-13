@@ -1,4 +1,5 @@
 import 'package:auto_route/annotations.dart';
+import 'package:edukonsel/presentation/consultation_history/page_consultation_history.dart';
 import 'package:edukonsel/presentation/consultation_list/page_consultation_list.dart';
 import 'package:edukonsel/presentation/consultation_reservation/page_consultation_reservation.dart';
 import 'package:edukonsel/presentation/core/pages/page_onboarding.dart';
@@ -29,6 +30,7 @@ import 'package:edukonsel/presentation/transaction_history/page_transaction_hist
   // PROFILE
   AutoRoute(page: PageMyAccount),
   AutoRoute(page: PageTransactionHistory),
+  AutoRoute(page: PageConsultationHistory),
   AutoRoute(page: PageProfileSetting),
 ])
 class $AppRouter {}

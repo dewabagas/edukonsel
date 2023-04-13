@@ -24,6 +24,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_check.svg
   String get icCheck => 'assets/icons/ic_check.svg';
 
+  /// File path: assets/icons/ic_checklist.svg
+  String get icChecklist => 'assets/icons/ic_checklist.svg';
+
   /// File path: assets/icons/ic_chevron_left.svg
   String get icChevronLeft => 'assets/icons/ic_chevron_left.svg';
 
@@ -38,6 +41,9 @@ class $AssetsIconsGen {
 
   /// File path: assets/icons/ic_consultation_grey.svg
   String get icConsultationGrey => 'assets/icons/ic_consultation_grey.svg';
+
+  /// File path: assets/icons/ic_cross_grey.svg
+  String get icCrossGrey => 'assets/icons/ic_cross_grey.svg';
 
   /// File path: assets/icons/ic_cross_red.svg
   String get icCrossRed => 'assets/icons/ic_cross_red.svg';
@@ -75,6 +81,9 @@ class $AssetsIconsGen {
   /// File path: assets/icons/ic_home_grey.svg
   String get icHomeGrey => 'assets/icons/ic_home_grey.svg';
 
+  /// File path: assets/icons/ic_indonesia.svg
+  String get icIndonesia => 'assets/icons/ic_indonesia.svg';
+
   /// File path: assets/icons/ic_logout.svg
   String get icLogout => 'assets/icons/ic_logout.svg';
 
@@ -108,11 +117,13 @@ class $AssetsIconsGen {
         icCalendar,
         icCase,
         icCheck,
+        icChecklist,
         icChevronLeft,
         icChevronRight,
         icClock,
         icConsultationBlue,
         icConsultationGrey,
+        icCrossGrey,
         icCrossRed,
         icEyeOffBlue,
         icEyeOffRed,
@@ -125,6 +136,7 @@ class $AssetsIconsGen {
         icHistory,
         icHomeBlue,
         icHomeGrey,
+        icIndonesia,
         icLogout,
         icMapMarker,
         icMyAccount,

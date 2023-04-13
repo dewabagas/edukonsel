@@ -81,11 +81,11 @@ class _TabProfileState extends State<TabProfile> {
             },
           ),
           CardProfileItem(
-            label: 'Riwayat Transaksi',
+            label: 'Riwayat Konsultasi',
             hasDivider: true,
             icon: AppIcons.icHistory,
             onTap: () {
-              AutoRouter.of(context).push(const RouteTransactionHistory());
+              AutoRouter.of(context).push(const RouteConsultationHistory());
             },
           ),
           CardProfileItem(

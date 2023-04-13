@@ -70,8 +70,8 @@ class _PageConsultationListState extends State<PageConsultationList> {
                     SizedBox(width: 10.w),
                     InkWell(
                       onTap: () {
-                        CustomBottomSheet.showAutoHeightBottomSheet(
-                            context: context, child: buildFilter());
+                        // CustomBottomSheet.showAutoHeightBottomSheet(
+                        //     context: context, child: buildFilter());
                       },
                       child: SvgPicture.asset(AppIcons.icFilter),
                     )
