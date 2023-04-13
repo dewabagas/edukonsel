@@ -119,7 +119,7 @@ class _PageConsultationReservationState
                 child: ButtonGradient(
                   onPressed: () {
                     AutoRouter.of(context)
-                        .push(const RouteConsultationReservation());
+                        .push(const RouteConsultationSuccess());
                   },
                   title: 'Selanjutnya',
                   height: 50.h,

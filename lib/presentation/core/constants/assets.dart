@@ -38,6 +38,7 @@ class AppIllustrations {
   static const String illConsultation =
       'assets/illustrations/ill_consultation.svg';
   static const String illTexting = 'assets/illustrations/ill_texting.svg';
+  static const String illWaiting = 'assets/illustrations/ill_waiting.svg';
 }
 
 class AppImages {
