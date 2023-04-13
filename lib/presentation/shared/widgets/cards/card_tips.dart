@@ -23,7 +23,7 @@ class _CardTipsState extends State<CardTips> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(horizontal: 7.w, vertical: 5.h),
+      padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
       margin: EdgeInsets.only(bottom: 15.h),
       decoration: BoxDecoration(
         color: AppColors.white,
@@ -46,12 +46,12 @@ class _CardTipsState extends State<CardTips> {
           ),
           SizedBox(width: 15.w),
           SizedBox(
-            width: 240.w,
+            width: 236.w,
             child: Column(
               children: [
                 Text('${widget.title}',
                     style: TextStyles.headlineSmall
-                        .copyWith(color: AppColors.darkGrey2, fontSize: 18.sp)),
+                        .copyWith(color: AppColors.charcoal, fontSize: 16.sp)),
                 SizedBox(height: 10.w),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

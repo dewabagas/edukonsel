@@ -1,18 +1,17 @@
+import 'dart:developer';
+
+import 'package:auto_route/auto_route.dart';
 import 'package:edukonsel/domain/consultation_list/model/filter_item.dart';
 import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
 import 'package:edukonsel/presentation/dashboard/components/card_search.dart';
+import 'package:edukonsel/presentation/routes/router.gr.dart';
 import 'package:edukonsel/presentation/shared/widgets/cards/card_counselor_wide.dart';
-import 'package:edukonsel/presentation/shared/widgets/cards/card_tips.dart';
-import 'package:edukonsel/presentation/shared/widgets/others/custom_bottom_sheet.dart';
 import 'package:edukonsel/presentation/shared/widgets/pages/page_decoration_top.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:multi_select_flutter/bottom_sheet/multi_select_bottom_sheet.dart';
 import 'package:multi_select_flutter/multi_select_flutter.dart';
 
 class PageConsultationList extends StatefulWidget {
@@ -89,7 +88,11 @@ class _PageConsultationListState extends State<PageConsultationList> {
                         experience: '3 tahun',
                         location: 'Bandung',
                         rating: 4.8,
-                        onPressed: () {},
+                        onPressed: () {
+                          log('haha');
+                          AutoRouter.of(context)
+                              .push(const RouteConsultationDetail());
+                        },
                       );
                     })
               ],

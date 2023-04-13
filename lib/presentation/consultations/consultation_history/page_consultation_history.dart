@@ -1,8 +1,8 @@
 import 'dart:developer';
 
-import 'package:edukonsel/presentation/consultation_history/components/tab_history.dart';
-import 'package:edukonsel/presentation/consultation_history/tabs/tab_history_active.dart';
-import 'package:edukonsel/presentation/consultation_history/tabs/tab_history_complete.dart';
+import 'package:edukonsel/presentation/consultations/consultation_history/components/tab_history.dart';
+import 'package:edukonsel/presentation/consultations/consultation_history/tabs/tab_history_active.dart';
+import 'package:edukonsel/presentation/consultations/consultation_history/tabs/tab_history_complete.dart';
 import 'package:edukonsel/presentation/shared/widgets/others/expandable_page_view/expandable_page_view.dart';
 import 'package:edukonsel/presentation/shared/widgets/pages/page_decoration_top.dart';
 import 'package:flutter/gestures.dart';
@@ -45,7 +45,7 @@ class _PageConsultationHistoryState extends State<PageConsultationHistory>
             children: [
               SizedBox(height: 30.h),
               Padding(
-                padding:  EdgeInsets.symmetric(horizontal: 20.w),
+                padding: EdgeInsets.symmetric(horizontal: 20.w),
                 child: TabHistory(
                   selectedIndex: selectedIndex,
                   onValueChanged: (i) {

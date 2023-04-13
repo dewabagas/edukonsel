@@ -1,15 +1,15 @@
-import 'package:edukonsel/presentation/consultation_history/components/card_consultation.dart';
+import 'package:edukonsel/presentation/consultations/consultation_history/components/card_consultation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class TabHistoryActive extends StatefulWidget {
-  const TabHistoryActive({super.key});
+class TabHistoryComplete extends StatefulWidget {
+  const TabHistoryComplete({super.key});
 
   @override
-  State<TabHistoryActive> createState() => _TabHistoryActiveState();
+  State<TabHistoryComplete> createState() => _TabHistoryCompleteState();
 }
 
-class _TabHistoryActiveState extends State<TabHistoryActive> {
+class _TabHistoryCompleteState extends State<TabHistoryComplete> {
   final List<String> images = [
     'https://staticg.sportskeeda.com/editor/2022/11/1db9b-16681805105538-1920.jpg',
     'https://e1.pxfuel.com/desktop-wallpaper/195/93/desktop-wallpaper-getou-suguru-suguru-geto.jpg',

@@ -65,7 +65,9 @@ class _SectionCounselorState extends State<SectionCounselor> {
                 subtitle: 'SIPP : 000000',
                 experience: '3 tahun',
                 rating: 4.9,
-                onPressed: () {},
+                onPressed: () {
+                  AutoRouter.of(context).push(const RouteConsultationDetail());
+                },
               );
             })
       ],
