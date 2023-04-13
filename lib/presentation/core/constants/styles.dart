@@ -57,18 +57,22 @@ class TextStyles {
   static TextStyle get bodyLarge => quicksand.copyWith(
         color: AppColors.charcoal,
         fontSize: 16.sp,
+        fontWeight: FontWeight.w500
       );
   static TextStyle get bodyMedium => quicksand.copyWith(
         color: AppColors.charcoal,
         fontSize: 14.sp,
+        fontWeight: FontWeight.w500
       );
   static TextStyle get bodySmall => quicksand.copyWith(
         color: AppColors.charcoal,
         fontSize: 12.sp,
+        fontWeight: FontWeight.w500
       );
 
   static TextStyle get bodyVerySmall => quicksand.copyWith(
         color: AppColors.charcoal,
         fontSize: 10.sp,
+        fontWeight: FontWeight.w500
       );
 }
