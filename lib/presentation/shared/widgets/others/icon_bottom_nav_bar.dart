@@ -13,15 +13,16 @@ class IconBottomNavBarItem {
 }
 
 class IconBottomAppNavBar extends StatefulWidget {
-  IconBottomAppNavBar({
-    Key? key,
-    this.items,
-    this.centerItemText,
-    this.backgroundColor,
-    this.notchedShape,
-    this.onTabSelected,
-    this.initialPage,
-  }) : super(key: key) {
+  IconBottomAppNavBar(
+      {Key? key,
+      this.items,
+      this.centerItemText,
+      this.backgroundColor,
+      this.notchedShape,
+      this.onTabSelected,
+      this.initialPage,
+      this.isDecorated = true})
+      : super(key: key) {
     assert(items!.length == 4);
   }
 
@@ -31,6 +32,7 @@ class IconBottomAppNavBar extends StatefulWidget {
   final NotchedShape? notchedShape;
   final ValueChanged<int?>? onTabSelected;
   final int? initialPage;
+  final bool isDecorated;
 
   @override
   _IconBottomAppNavBarState createState() => _IconBottomAppNavBarState();
@@ -61,17 +63,19 @@ class _IconBottomAppNavBarState extends State<IconBottomAppNavBar> {
 
     return Container(
       decoration: BoxDecoration(boxShadow: [
-        BoxShadow(
+        widget.isDecorated ? BoxShadow(
             offset: const Offset(0, 0),
             blurRadius: 15,
             spreadRadius: 0,
-            color: const Color(0xFF3A3A3A).withOpacity(0.15))
+            color: const Color(0xFF3A3A3A).withOpacity(0.15)) : const BoxShadow()
       ]),
       child: ClipRRect(
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(30.r),
-          topRight: Radius.circular(30.r),
-        ),
+        borderRadius: widget.isDecorated
+            ? BorderRadius.only(
+                topLeft: Radius.circular(30.r),
+                topRight: Radius.circular(30.r),
+              )
+            : BorderRadius.zero,
         child: BottomAppBar(
           shape: widget.notchedShape,
           color: widget.backgroundColor,

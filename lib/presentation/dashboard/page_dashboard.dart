@@ -1,5 +1,6 @@
 import 'package:edukonsel/presentation/core/constants/assets.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
+import 'package:edukonsel/presentation/dashboard/tabs/tab_consultation.dart';
 import 'package:edukonsel/presentation/dashboard/tabs/tab_home_patient.dart';
 import 'package:edukonsel/presentation/dashboard/tabs/tab_profile.dart';
 import 'package:edukonsel/presentation/dashboard/tabs/tab_tips.dart';
@@ -38,7 +39,7 @@ class _PageDashboardState extends State<PageDashboard> {
   static final List widgetOptions = [
     const TabHomePatient(),
     const TabTips(),
-    const TabHomePatient(),
+    const TabConsultation(),
     const TabProfile(),
   ];
 
@@ -58,6 +59,7 @@ class _PageDashboardState extends State<PageDashboard> {
           onTabSelected: _onItemTapped,
           initialPage: _currentIndex,
           items: items,
+          isDecorated: _currentIndex == 2 ? false : true,
         ));
   }
 }
