@@ -158,8 +158,11 @@ class $AssetsIllustrationsGen {
   /// File path: assets/illustrations/ill_texting.svg
   String get illTexting => 'assets/illustrations/ill_texting.svg';
 
+  /// File path: assets/illustrations/ill_waiting.svg
+  String get illWaiting => 'assets/illustrations/ill_waiting.svg';
+
   /// List of all assets
-  List<String> get values => [illConsultation, illTexting];
+  List<String> get values => [illConsultation, illTexting, illWaiting];
 }
 
 class $AssetsImagesGen {
@@ -255,7 +258,16 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider() => AssetImage(_assetName);
+  ImageProvider provider({
+    AssetBundle? bundle,
+    String? package,
+  }) {
+    return AssetImage(
+      _assetName,
+      bundle: bundle,
+      package: package,
+    );
+  }
 
   String get path => _assetName;
 

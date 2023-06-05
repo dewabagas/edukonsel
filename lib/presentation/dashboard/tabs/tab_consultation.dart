@@ -1,6 +1,8 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:edukonsel/domain/consultation/models/chat_message.dart';
 import 'package:edukonsel/presentation/core/constants/styles.dart';
 import 'package:edukonsel/presentation/core/styles/app_colors.dart';
+import 'package:edukonsel/presentation/routes/router.gr.dart';
 import 'package:edukonsel/presentation/shared/widgets/images/image_circle.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,14 +16,18 @@ class TabConsultation extends StatefulWidget {
 
 class _TabConsultationState extends State<TabConsultation> {
   List<ChatMessage> messages = [
-    ChatMessage(messageContent: "Assalamualaikum, Kak", messageType: "receiver"),
+    ChatMessage(
+        messageContent: "Assalamualaikum, Kak", messageType: "receiver"),
     ChatMessage(messageContent: "Apa Kabs?", messageType: "receiver"),
     ChatMessage(
-        messageContent: "Yo wassap meh, i'm good meh",
-        messageType: "sender"),
-    ChatMessage(messageContent: "Baiklah, apa ada yang bisa saya bantu konsultasi?", messageType: "receiver"),
+        messageContent: "Yo wassap meh, i'm good meh", messageType: "sender"),
     ChatMessage(
-        messageContent: "Iya kak, lately aku ngerasa kalau aku down banget kak?", messageType: "sender"),
+        messageContent: "Baiklah, apa ada yang bisa saya bantu konsultasi?",
+        messageType: "receiver"),
+    ChatMessage(
+        messageContent:
+            "Iya kak, lately aku ngerasa kalau aku down banget kak?",
+        messageType: "sender"),
   ];
 
   @override
@@ -69,9 +75,24 @@ class _TabConsultationState extends State<TabConsultation> {
                     ],
                   ),
                 ),
-                const Icon(
-                  Icons.settings,
-                  color: Colors.black54,
+                Container(
+                  height: 45.w,
+                  width: 45.w,
+                  margin: EdgeInsets.only(right: 10.w, left: 10.w),
+                  decoration: BoxDecoration(
+                    color: AppColors.primary,
+                    borderRadius: BorderRadius.circular(60.r),
+                  ),
+                  child: IconButton(
+                    icon: const Icon(
+                      Icons.video_call,
+                      color: Colors.white,
+                    ),
+                    onPressed: () {
+                      AutoRouter.of(context)
+                          .push(const RouteConsultationVideoConference());
+                    },
+                  ),
                 ),
               ],
             ),
@@ -87,8 +108,7 @@ class _TabConsultationState extends State<TabConsultation> {
             physics: const NeverScrollableScrollPhysics(),
             itemBuilder: (context, index) {
               return Container(
-                padding:
-                    EdgeInsets.symmetric(horizontal: 14.w, vertical: 10.h),
+                padding: EdgeInsets.symmetric(horizontal: 14.w, vertical: 10.h),
                 child: Align(
                   alignment: (messages[index].messageType == "receiver"
                       ? Alignment.topLeft
@@ -100,7 +120,8 @@ class _TabConsultationState extends State<TabConsultation> {
                           ? Colors.grey.shade200
                           : AppColors.primary.withOpacity(0.5)),
                     ),
-                    padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
+                    padding:
+                        EdgeInsets.symmetric(horizontal: 16.w, vertical: 16.h),
                     child: Text(
                       messages[index].messageContent,
                       style: TextStyles.bodyLarge,
