@@ -78,7 +78,9 @@ class _PageLoginState extends State<PageLogin> {
                     ),
                     SizedBox(height: 32.h),
                     ButtonGradient(
-                        title: 'Login', height: 50.h, onPressed: () {}),
+                        title: 'Login', height: 50.h, onPressed: () {
+                          AutoRouter.of(context).push(const RouteDashboard());
+                        }),
                     SizedBox(height: 57.h),
                     Text('atau login dengan',
                         style: TextStyles.labelLarge

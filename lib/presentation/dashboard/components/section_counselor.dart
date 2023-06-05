@@ -19,11 +19,6 @@ class _SectionCounselorState extends State<SectionCounselor> {
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
     'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
-    'https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Djimon_Hounsou_%28cropped%29.jpg/1200px-Djimon_Hounsou_%28cropped%29.jpg',
   ];
 
   @override
@@ -42,7 +37,7 @@ class _SectionCounselorState extends State<SectionCounselor> {
                 AutoRouter.of(context).push(const RouteConsultationList());
               },
               child: Text(
-                'Lihat Semua >>',
+                'Lihat Semua',
                 style: TextStyles.headlineSmall
                     .copyWith(fontSize: 12.sp, color: AppColors.darkGrey2),
               ),
